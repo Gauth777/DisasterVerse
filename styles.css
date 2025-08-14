@@ -13,6 +13,41 @@ html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-fam
 .card{background:var(--card); border:1px solid #1b2550; border-radius:var(--radius); padding:20px; box-shadow:0 6px 24px rgba(0,0,0,.25)}
 .grid{display:grid; gap:16px}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.scoreboard{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 12px; border-radius:999px;
+  background:#0f1732; border:1px solid #223067; color:#e9eefc;
+  font-weight:600; font-size:.92rem;
+}
+.pill .muted{ color:#a7b0c9; font-weight:500 }
+/* scoreboard (already added earlier) — extra bits for popover */
+.scoreboard{ margin-left:auto; display:flex; align-items:center; gap:8px; position:relative; }
+.pill{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
+  background:#0f1732; border:1px solid #223067; color:#e9eefc; font-weight:600; font-size:.92rem; cursor:pointer; }
+.pill:active{ transform:translateY(1px) }
+.pill .muted{ color:#a7b0c9; font-weight:500 }
+
+/* tiny popover */
+.popover{
+  position:fixed; z-index:9999; background:#0f1732; color:#e9eefc;
+  border:1px solid #223067; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+  min-width:240px; padding:12px; animation:pop .12s ease-out;
+}
+@keyframes pop{ from{ transform:translateY(-4px); opacity:0 } to{ transform:translateY(0); opacity:1 } }
+.popover h4{ margin:0 0 8px; font-size:1rem }
+.popover p{ margin:0 0 12px; color:#a7b0c9; font-size:.9rem }
+.popover .actions{ display:flex; gap:8px; }
+.popover .btn{ padding:8px 12px; border-radius:10px; font-weight:700 }
+.popover .btn-danger{ background:#ff7575; color:#2b0e0e; border:none }
+.popover .btn-ghost{ background:transparent; border:1px dashed #2d3a6a; color:#e9eefc }
+
+
 h2{margin:0 0 12px}
 p{color:var(--muted)}
 .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; border:none; border-radius:12px; padding:10px 14px; font-weight:600; cursor:pointer; transition:.2s transform, .2s opacity}
