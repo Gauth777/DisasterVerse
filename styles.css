@@ -1,0 +1,33 @@
+:root{
+  --bg:#0b1020; --card:#121a34; --muted:#a7b0c9; --text:#e9eefc;
+  --accent:#6ae38c; --danger:#ff7575; --warn:#ffd86b; --brand:#7aa5ff;
+  --ring:#2a3a74; --radius:16px;
+  font-synthesis-weight:none;
+}
+*{box-sizing:border-box}
+html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+.app-header,.app-footer{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:20px 24px; background:linear-gradient(180deg,#0b1020,#0b102000)}
+.app-header h1{margin:0; font-size:1.4rem}
+.tag{color:var(--muted); margin:0}
+.container{max-width:920px; margin:0 auto; padding:24px}
+.card{background:var(--card); border:1px solid #1b2550; border-radius:var(--radius); padding:20px; box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.grid{display:grid; gap:16px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+h2{margin:0 0 12px}
+p{color:var(--muted)}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; border:none; border-radius:12px; padding:10px 14px; font-weight:600; cursor:pointer; transition:.2s transform, .2s opacity}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--brand); color:#081027}
+.btn-ghost{background:transparent; border:1px dashed #2d3a6a; color:var(--text)}
+.badge{display:inline-block; padding:4px 8px; border-radius:999px; background:#1a2347; color:#9db3ff; font-size:.78rem}
+.kicker{font-size:.85rem; color:var(--muted)}
+.progress{height:10px; background:#0e1630; border-radius:999px; overflow:hidden; border:1px solid #1b2550}
+.progress > div{height:100%; width:0; background:linear-gradient(90deg,#7aa5ff,#6ae38c); transition:width .2s}
+.option{padding:14px; border:1px solid #223067; border-radius:12px; background:#0f1732; cursor:pointer}
+.option:hover{border-color:#2f469a}
+.option .explain{display:none; color:#b8c2e6; font-size:.9rem; margin-top:6px}
+.option.selected{outline:2px solid var(--ring)}
+.timer{font-weight:700}
+.score{font-size:1.2rem; font-weight:700}
+.center{display:flex; align-items:center; justify-content:center}

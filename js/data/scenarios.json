@@ -1,0 +1,88 @@
+[
+  {
+    "id": "flood-urban-medium",
+    "title": "Urban Flood Warning (Medium)",
+    "kicker": "Coastal city • Monsoon season",
+    "intro": "Heavy rainfall is forecast. Drains already overflowing near your street. You have 30 minutes before water may enter ground floors.",
+    "steps": [
+      {
+        "id": "step1",
+        "time": 25,
+        "question": "You receive an official flood alert. What do you do first?",
+        "options": [
+          { "id": "s1o1", "label": "Check gov/municipal updates & evacuation routes", "score": 10, "explain": "Trusted info first reduces panic & misinformation." },
+          { "id": "s1o2", "label": "Post on social media asking friends what to do", "score": 2, "explain": "Might help later, but slow and unreliable at start." },
+          { "id": "s1o3", "label": "Ignore & continue as usual", "score": -12, "explain": "Delay can be dangerous." }
+        ]
+      },
+      {
+        "id": "step2",
+        "time": 25,
+        "question": "Water starts pooling. What’s your immediate action?",
+        "options": [
+          { "id": "s2o1", "label": "Turn off mains electricity & move essentials upstairs", "score": 10, "explain": "Prevents electrocution & reduces damage." },
+          { "id": "s2o2", "label": "Drive your car out right now through water", "score": -6, "explain": "Flooded roads are unpredictable; risk of stalling/stranding." },
+          { "id": "s2o3", "label": "Wait for a neighbour to coordinate", "score": -2, "explain": "Coordination is good, but act on safety first." }
+        ]
+      },
+      {
+        "id": "step3",
+        "time": 25,
+        "question": "Evacuation is advised in your zone. Choose:",
+        "options": [
+          { "id": "s3o1", "label": "Grab go‑bag (IDs, meds, water) & take recommended route", "score": 12, "explain": "Prepared & safer route lowers risk." },
+          { "id": "s3o2", "label": "Take the shortest alley you know (not on the map)", "score": -4, "explain": "Unknown flood depth is hazardous." },
+          { "id": "s3o3", "label": "Stay put; wait it out on ground floor", "score": -10, "explain": "Water could rise rapidly." }
+        ]
+      }
+    ],
+    "outcomes": [
+      { "min": 26, "title": "Prepared", "message": "You made timely choices and reduced risk for you & others." },
+      { "min": 10, "title": "At Risk", "message": "Mixed decisions. Improve speed & verify official routes." },
+      { "min": -999, "title": "Unsafe", "message": "Critical delays & choices increased danger." }
+    ]
+  },
+  {
+    "id": "heatwave-urban-high",
+    "title": "Heatwave Advisory (High)",
+    "kicker": "Urban core • Power outages possible",
+    "intro": "A severe heatwave is forecast for 72 hours. Grid is under stress. Dehydration & heatstroke risks rising.",
+    "steps": [
+      {
+        "id": "hw1",
+        "time": 25,
+        "question": "Temperatures will exceed 44°C. First step?",
+        "options": [
+          { "id": "h1o1", "label": "Plan hydration schedule & check on vulnerable neighbours", "score": 10, "explain": "Prioritizes health & community." },
+          { "id": "h1o2", "label": "Close all windows and turn AC to lowest temp all day", "score": -5, "explain": "Overload risk + poor efficiency." },
+          { "id": "h1o3", "label": "Go for an afternoon run to ‘adapt’", "score": -10, "explain": "Risk of heatstroke is high." }
+        ]
+      },
+      {
+        "id": "hw2",
+        "time": 25,
+        "question": "Midday outage hits. What’s your move?",
+        "options": [
+          { "id": "h2o1", "label": "Use passive cooling (shades, damp cloth, ventilate in evening)", "score": 9, "explain": "Effective & low-resource." },
+          { "id": "h2o2", "label": "Sit in a parked car with AC on for hours", "score": -8, "explain": "Dangerous in heat; fuel/carbon waste." },
+          { "id": "h2o3", "label": "Ignore the heat; continue screen time", "score": -3, "explain": "Hydration & rest matter." }
+        ]
+      },
+      {
+        "id": "hw3",
+        "time": 25,
+        "question": "Resources are limited. Prioritize:",
+        "options": [
+          { "id": "h3o1", "label": "Water, ORS, light meals; avoid caffeine/alcohol", "score": 10, "explain": "Best for hydration & safety." },
+          { "id": "h3o2", "label": "Energy drinks & spicy fried food", "score": -6, "explain": "Dehydrating and heavy." },
+          { "id": "h3o3", "label": "Nothing needed; ‘mind over matter’", "score": -9, "explain": "Physiology disagrees." }
+        ]
+      }
+    ],
+    "outcomes": [
+      { "min": 26, "title": "Resilient", "message": "Excellent preparation & resource use." },
+      { "min": 10, "title": "Moderate", "message": "Some good choices; refine hydration & cooling." },
+      { "min": -999, "title": "Vulnerable", "message": "High risk. Follow guidelines closely." }
+    ]
+  }
+]
