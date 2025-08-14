@@ -54,7 +54,7 @@
         "question": "Temperatures will exceed 44°C. First step?",
         "options": [
           { "id": "h1o1", "label": "Plan hydration schedule & check on vulnerable neighbours", "score": 10, "explain": "Prioritizes health & community." },
-          { "id": "h1o2", "label": "Close all windows and turn AC to lowest temp all day", "score": -5, "explain": "Overload risk + poor efficiency." },
+          { "id": "h1o2", "label": "Close all windows and run AC at lowest temp all day", "score": -5, "explain": "Overload risk + poor efficiency." },
           { "id": "h1o3", "label": "Go for an afternoon run to ‘adapt’", "score": -10, "explain": "Risk of heatstroke is high." }
         ]
       },
@@ -83,6 +83,178 @@
       { "min": 26, "title": "Resilient", "message": "Excellent preparation & resource use." },
       { "min": 10, "title": "Moderate", "message": "Some good choices; refine hydration & cooling." },
       { "min": -999, "title": "Vulnerable", "message": "High risk. Follow guidelines closely." }
+    ]
+  },
+  {
+    "id": "earthquake-urban-high",
+    "title": "Earthquake: Strong Shaking Expected",
+    "kicker": "Urban apartments • Aftershocks likely",
+    "intro": "A 6.8 quake has struck nearby. Shaking has stopped, but strong aftershocks are possible. Elevators and some stairwells may be unsafe.",
+    "steps": [
+      {
+        "id": "eq1",
+        "time": 25,
+        "question": "Right after the main shock:",
+        "options": [
+          { "id": "e1o1", "label": "Check for gas leaks, turn off gas/electric if damaged", "score": 10, "explain": "Prevents fire/explosion." },
+          { "id": "e1o2", "label": "Use the elevator to get down quickly", "score": -10, "explain": "Elevators can fail in aftershocks." },
+          { "id": "e1o3", "label": "Run into the street without checking debris", "score": -4, "explain": "Falling glass/objects outside can be dangerous." }
+        ]
+      },
+      {
+        "id": "eq2",
+        "time": 25,
+        "question": "You need to evacuate your building:",
+        "options": [
+          { "id": "e2o1", "label": "Take stairs; avoid walls/windows; cover head", "score": 10, "explain": "Safer egress route." },
+          { "id": "e2o2", "label": "Wait on a balcony for help", "score": -5, "explain": "Balconies can be structurally weak." },
+          { "id": "e2o3", "label": "Grab heavy items first (TV, PC)", "score": -6, "explain": "Wastes time & increases risk." }
+        ]
+      },
+      {
+        "id": "eq3",
+        "time": 25,
+        "question": "Outside in a safe open area:",
+        "options": [
+          { "id": "e3o1", "label": "Check injuries, apply basic first aid, conserve phone battery", "score": 10, "explain": "Prioritizes life & comms." },
+          { "id": "e3o2", "label": "Re-enter building to search belongings", "score": -8, "explain": "Aftershocks could collapse weakened structures." },
+          { "id": "e3o3", "label": "Drive around to survey damage", "score": -4, "explain": "Roads must be clear for emergency vehicles." }
+        ]
+      }
+    ],
+    "outcomes": [
+      { "min": 26, "title": "Safe & Smart", "message": "You minimized risks during and after the quake." },
+      { "min": 10, "title": "Cautious", "message": "Decent response; avoid re-entering risky structures." },
+      { "min": -999, "title": "High Risk", "message": "Choices exposed you to serious hazards." }
+    ]
+  },
+  {
+    "id": "wildfire-periurban-medium",
+    "title": "Wildfire Encroaching (Medium)",
+    "kicker": "Peri‑urban edge • Wind shifts possible",
+    "intro": "A wildfire has been reported 6 km away. Winds may push embers toward your neighbourhood within hours.",
+    "steps": [
+      {
+        "id": "wf1",
+        "time": 25,
+        "question": "First measures at home:",
+        "options": [
+          { "id": "w1o1", "label": "Clear dry leaves near home; seal vents; prep go‑bag", "score": 10, "explain": "Reduces ember ignition; prepares for move." },
+          { "id": "w1o2", "label": "Spray entire roof for hours immediately", "score": -3, "explain": "May waste water; not always effective this early." },
+          { "id": "w1o3", "label": "Do nothing until flames are visible", "score": -8, "explain": "Too late once embers arrive." }
+        ]
+      },
+      {
+        "id": "wf2",
+        "time": 25,
+        "question": "Evacuation notice could come soon:",
+        "options": [
+          { "id": "w2o1", "label": "Plan route away from fire line; keep car fuelled; notify neighbours", "score": 10, "explain": "Buys time; reduces panic." },
+          { "id": "w2o2", "label": "Wait for a friend to confirm on Instagram", "score": -5, "explain": "Official alerts > social posts." },
+          { "id": "w2o3", "label": "Start a small back-burn yourself", "score": -12, "explain": "Extremely dangerous and illegal in many places." }
+        ]
+      },
+      {
+        "id": "wf3",
+        "time": 25,
+        "question": "Smoke levels rise; visibility drops:",
+        "options": [
+          { "id": "w3o1", "label": "Use masks, stay low indoors or evacuate early via safe route", "score": 10, "explain": "Minimizes smoke inhalation; avoids last-minute rush." },
+          { "id": "w3o2", "label": "Drive toward the ridge for a closer look", "score": -7, "explain": "Road closures and sudden fire shifts are deadly." },
+          { "id": "w3o3", "label": "Ignore; windows open for 'fresh air'", "score": -6, "explain": "Smoke exposure harms health." }
+        ]
+      }
+    ],
+    "outcomes": [
+      { "min": 26, "title": "Proactive", "message": "You reduced ignition risks and planned smartly." },
+      { "min": 10, "title": "Borderline", "message": "Some good calls; act earlier on evacuation planning." },
+      { "min": -999, "title": "Endangered", "message": "Choices increased exposure to fire and smoke." }
+    ]
+  },
+  {
+    "id": "cyberblackout-city-medium",
+    "title": "City‑Wide Cyber Blackout",
+    "kicker": "Critical systems disrupted • ATMs & mobile data down",
+    "intro": "A cyberattack has disrupted power, banking, and cellular data in parts of the city. Misinformation and panic buying are spreading.",
+    "steps": [
+      {
+        "id": "cb1",
+        "time": 25,
+        "question": "First 2 hours of outage:",
+        "options": [
+          { "id": "c1o1", "label": "Conserve battery; verify info via radio/official SMS; avoid panic buys", "score": 10, "explain": "Preserves comms; reduces chaos." },
+          { "id": "c1o2", "label": "Share unverified rumours to warn others", "score": -6, "explain": "Misinformation escalates risk." },
+          { "id": "c1o3", "label": "Drive city-wide to find working ATM", "score": -4, "explain": "Fuel waste + traffic congestion." }
+        ]
+      },
+      {
+        "id": "cb2",
+        "time": 25,
+        "question": "Payments are unreliable; shops only take cash:",
+        "options": [
+          { "id": "c2o1", "label": "Prioritize essentials; coordinate with neighbours; keep receipts", "score": 9, "explain": "Controls costs; supports community." },
+          { "id": "c2o2", "label": "Withdraw as much cash as possible and hoard", "score": -5, "explain": "Drains supply; fuels panic." },
+          { "id": "c2o3", "label": "Argue with shopkeepers about prices loudly", "score": -3, "explain": "Escalation risks safety." }
+        ]
+      },
+      {
+        "id": "cb3",
+        "time": 25,
+        "question": "Communication slowly returns:",
+        "options": [
+          { "id": "c3o1", "label": "Report cyber incidents; change passwords; enable 2FA", "score": 10, "explain": "Reduces further compromise." },
+          { "id": "c3o2", "label": "Reuse same passwords; click 'update link' from unknown SMS", "score": -9, "explain": "Phishing risk post‑incident is high." },
+          { "id": "c3o3", "label": "Publicly post your OTP method to 'educate friends'", "score": -7, "explain": "Discloses security practices to attackers." }
+        ]
+      }
+    ],
+    "outcomes": [
+      { "min": 26, "title": "Digitally Resilient", "message": "You minimized chaos and improved cyber hygiene." },
+      { "min": 10, "title": "Manageable", "message": "Some good choices; improve info verification." },
+      { "min": -999, "title": "Exposed", "message": "Risky behaviour amplified the crisis." }
+    ]
+  },
+  {
+    "id": "pandemic-emerging-medium",
+    "title": "Emerging Pandemic: Local Cluster",
+    "kicker": "New variant • Limited hospital capacity",
+    "intro": "A contagious respiratory illness is spreading. Cases are rising in your district. Supplies and hospital beds are tight.",
+    "steps": [
+      {
+        "id": "pd1",
+        "time": 25,
+        "question": "Symptoms appear in your household:",
+        "options": [
+          { "id": "p1o1", "label": "Isolate symptomatic member; mask indoors; call helpline", "score": 10, "explain": "Reduces spread; gets guidance." },
+          { "id": "p1o2", "label": "Host a small gathering since 'it’s just a cold'", "score": -9, "explain": "Accelerates transmission." },
+          { "id": "p1o3", "label": "Self‑medicate randomly; avoid testing", "score": -5, "explain": "Delays appropriate care." }
+        ]
+      },
+      {
+        "id": "pd2",
+        "time": 25,
+        "question": "You need groceries & meds:",
+        "options": [
+          { "id": "p2o1", "label": "Use delivery if possible; contactless pickup; plan 2‑week essentials", "score": 9, "explain": "Limits exposure; avoids panic purchases." },
+          { "id": "p2o2", "label": "Daily trips to crowded market for 'freshness'", "score": -6, "explain": "Increases exposure repeatedly." },
+          { "id": "p2o3", "label": "Buy all masks/meds you can find", "score": -4, "explain": "Creates shortages for others." }
+        ]
+      },
+      {
+        "id": "pd3",
+        "time": 25,
+        "question": "Information & community conduct:",
+        "options": [
+          { "id": "p3o1", "label": "Follow public health advisories; verify sources; support vulnerable", "score": 10, "explain": "Balances safety & solidarity." },
+          { "id": "p3o2", "label": "Share 'miracle cures' and anti‑mask posts", "score": -8, "explain": "Undermines public health." },
+          { "id": "p3o3", "label": "Visit crowded celebrations to 'boost morale'", "score": -7, "explain": "Large gatherings spike cases." }
+        ]
+      }
+    ],
+    "outcomes": [
+      { "min": 26, "title": "Public‑Health Ally", "message": "Smart isolation, planning, and verified info." },
+      { "min": 10, "title": "Mixed Response", "message": "Improve sourcing, testing, and crowd avoidance." },
+      { "min": -999, "title": "High Transmission Risk", "message": "Choices contribute to spread and strain on care." }
     ]
   }
 ]
